@@ -13,7 +13,7 @@ data "hcs_federation_token" "dc1" {
 
 // Create dc2
 resource "hcs_cluster" "dc2" {
-  resource_group_name      = azurerm_resource_group.rg.name
+  resource_group_name      = azurerm_resource_group.us_west_2.name
   managed_application_name = "dc2"
   email                    = "dstrickland@hashicorp.com"
   cluster_mode             = "production"

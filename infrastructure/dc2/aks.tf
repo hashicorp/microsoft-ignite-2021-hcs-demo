@@ -3,8 +3,8 @@ resource "azurerm_kubernetes_cluster" "dc2" {
     type = "SystemAssigned"
   }
   name                = "dc2"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.us_west_2.location
+  resource_group_name = azurerm_resource_group.us_west_2.name
   dns_prefix          = "dc2-dns"
 
   linux_profile {
