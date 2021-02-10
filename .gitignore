@@ -97,4 +97,3 @@ override.tf.json
 !.vscode/extensions.json
 *.code-workspace
 
-# End of https://www.toptal.com/developers/gitignore/api/terraform,vscode,osx,macos,go
