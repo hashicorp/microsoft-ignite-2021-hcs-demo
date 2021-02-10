@@ -1,13 +1,13 @@
 resource "azurerm_virtual_network" "vnet2" {
   name                = "vnet2"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.us_west_2.location
+  resource_group_name = azurerm_resource_group.us_west_2.name
   address_space       = ["11.0.0.0/8"]
 }
 
 resource "azurerm_subnet" "subnet2" {
   name                 = "subnet"
-  resource_group_name  = azurerm_resource_group.rg.name
+  resource_group_name  = azurerm_resource_group.us_west_2.name
   virtual_network_name = azurerm_virtual_network.vnet2.name
   address_prefixes     = ["11.0.0.0/16"]
 }
@@ -19,7 +19,7 @@ data "azurerm_virtual_network" "hcsvnet2" {
 
 resource "azurerm_virtual_network_peering" "aks2_to_hcs2" {
   name                      = "aks2_to_hcs2"
-  resource_group_name       = azurerm_resource_group.rg.name
+  resource_group_name       = azurerm_resource_group.us_west_2.name
   virtual_network_name      = azurerm_virtual_network.vnet2.name
   remote_virtual_network_id = data.azurerm_virtual_network.hcsvnet2.id
   allow_virtual_network_access = true

@@ -1,5 +1,5 @@
 output "rg" {
-  value = azurerm_resource_group.rg.name
+  value = azurerm_resource_group.us_west_2.name
 }
 
 output "url" {
