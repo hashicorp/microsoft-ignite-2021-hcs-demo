@@ -15,7 +15,7 @@ data "hcs_federation_token" "dc1" {
 resource "hcs_cluster" "dc2" {
   resource_group_name      = azurerm_resource_group.us_west_2.name
   managed_application_name = "dc2"
-  email                    = "dstrickland@hashicorp.com"
+  email                    = "education@hashicorp.com"
   cluster_mode             = "production"
   min_consul_version       = "v1.9.1"
   vnet_cidr                = "172.25.17.0/24"
