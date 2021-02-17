@@ -7,7 +7,7 @@ provider "hcs" { }
 
 resource "azurerm_resource_group" "us_west_1" {
   name     = "hcs-ignite-us-west-1"
-  location = "westus1"
+  location = "westus"
 }
 
 resource "azurerm_resource_group" "us_west_2" {
