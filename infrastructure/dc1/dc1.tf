@@ -3,16 +3,15 @@ provider "azurerm" {
   features {}
 }
 
-provider "hcs" { }
-
-resource "azurerm_resource_group" "rg" {
-  name     = "hcs-ignite-dc1"
-  location = "westus2"
+data "azurerm_resource_group" "us_central" {
+  name = "hcs-ignite-us-central"
 }
+
+provider "hcs" { }
 
 // Create dc1
 resource "hcs_cluster" "dc1" {
-  resource_group_name      = azurerm_resource_group.us_west_1.name
+  resource_group_name      = data.azurerm_resource_group.us_central.name
   managed_application_name = "dc1"
   email                    = "education@hashicorp.com"
   cluster_mode             = "production"

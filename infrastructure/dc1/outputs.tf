@@ -1,5 +1,5 @@
 output "rg" {
-  value = azurerm_resource_group.us_west_1.name
+  value = data.azurerm_resource_group.us_central.name
 }
 output "url" {
   value = hcs_cluster.dc1.consul_external_endpoint_url
