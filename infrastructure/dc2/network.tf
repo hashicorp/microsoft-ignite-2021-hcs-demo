@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 resource "azurerm_virtual_network" "vnet2" {
   name                = "vnet2"
   location            = data.azurerm_resource_group.us_west_2.location
