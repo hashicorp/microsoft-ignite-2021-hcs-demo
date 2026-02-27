@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 # AKS cluster setup
 resource "azurerm_kubernetes_cluster" "dc1" {
   identity {
