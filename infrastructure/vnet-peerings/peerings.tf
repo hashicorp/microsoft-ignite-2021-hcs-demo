@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 provider "azurerm" {
   version = "~>2.0"
   features {}

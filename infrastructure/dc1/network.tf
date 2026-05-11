@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 resource "azurerm_virtual_network" "vnet1" {
   name                = "vnet1"
   location            = data.azurerm_resource_group.us_central.location
