@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 output "rg" {
   value = data.azurerm_resource_group.us_west_2.name
 }

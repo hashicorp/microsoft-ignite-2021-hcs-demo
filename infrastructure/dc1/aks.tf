@@ -1,3 +1,5 @@
+# Copyright IBM Corp. 2021, 2026
+
 # AKS cluster setup
 resource "azurerm_kubernetes_cluster" "dc1" {
   identity {
